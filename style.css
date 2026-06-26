@@ -1,0 +1,316 @@
+/* =========================================
+   GLOBAL & BASES
+========================================= */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdfaf6;
+    color: #333;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.2em;
+    display: inline-block;
+    color: white;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #ffd700;
+    transform: scale(1.05);
+}
+
+nav {
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    padding: 8px 16px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+}
+
+nav ul li a:hover {
+    border-color: #ffd700;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 40px 0;
+}
+
+/* =========================================
+   ACCUEIL HERO (RESTAURANT)
+========================================= */
+#accueil {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("WhatsApp Image 2026-06-25 at 07.06.29 (2).jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+#accueil header h1 {
+    font-size: 4em;
+    color: lightpink;
+    margin-bottom: 20px;
+}
+
+.messagemonaccuiel {
+    font-size: 1.8em;
+    font-weight: 600;
+    font-style: italic;
+    max-width: 800px;
+    margin-top: 20px;
+    line-height: 1.5;
+}
+
+/* EN-TÊTE DE LA BOUTIQUE FASHION GLOW */
+#mon_style {
+    background-color: #111;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+#mon_style h1 {
+    font-size: 3em;
+    color: #ffd700;
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   CONTEURS DE GRILLES DE PRODUITS
+========================================= */
+#mon_entrees, #nos_plats, #nos_desserts, #mes_jupe, #mes_blousespulls, #mes_ensemblechic {
+    background-color: #5c4033;
+    padding: 40px 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* Changement de couleur de fond pour les sections Mode */
+#mes_jupe, #mes_blousespulls, #mes_ensemblechic {
+    background-color: #1a252f;
+}
+
+.entre, .entete {
+    font-style: italic;
+    font-size: 1.2em;
+    text-align: center;
+    color: #f5e6d3;
+    margin-bottom: 30px;
+}
+
+/* Alignement automatique flexible pour les cartes */
+.platsentrées, .plats-mets, .desert, .publication-produit {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Style commun des boîtes produits/plats */
+.plat-item, .plats, .desserts, .produit {
+    flex: 1 1 300px;
+    max-width: 350px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.plat-item:hover, .plats:hover, .desserts:hover, .produit:hover {
+    transform: translateY(-8px);
+    background-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+}
+
+.plat-item img, .plats img, .desserts img, .produit img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.plat-item img:hover, .plats img:hover, .desserts img:hover, .produit img:hover {
+    transform: scale(1.03);
+}
+
+.description-du-plat, .description-mets, .description-desserts, .description-photo {
+    font-size: 1em;
+    color: #f5e6d3;
+    margin: 15px 0;
+    flex-grow: 1;
+}
+
+.Prix, .prix2, .prix3, .prix0, .prix1 {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #ffd700;
+    margin-top: 10px;
+    display: block;
+}
+
+/* Boutons de commandes */
+.toggle-btn {
+    background-color: #ffd700;
+    color: #5c4033;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.toggle-btn:hover {
+    background-color: white;
+    color: #222;
+}
+
+/* =========================================
+   SECTION AVIS & COMMENTAIRES
+========================================= */
+#nos_commentaires {
+    background-color: #fdfaf6;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.com {
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    font-size: 2.2em;
+    border: 3px solid #5c4033;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0.02);
+    letter-spacing: 2px;
+}
+
+.commentaires-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+}
+
+.commentaires-box {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border-left: 5px solid #ffd700;
+    text-align: left;
+}
+
+.commentaires-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Correction ici : ciblage direct de la balise p et aside dans la boite */
+.commentaires-box p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #5c4033;
+    margin-bottom: 8px;
+    border-bottom: 2px solid #f5e6d3;
+    padding-bottom: 5px;
+}
+
+.commentaires-box aside {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.btn-plus {
+    background-color: #5c4033;
+    color: white;
+    border: none;
+    padding: 14px 35px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-plus:hover {
+    background-color: #ffd700;
+    color: #333;
+    transform: scale(1.05);
+}
+
+/* =========================================
+   CONTACTS & PIED DE PAGE
+========================================= */
+#nos_contacts {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f5e6d3;
+    color: #5c4033;
+}
+
+.cont {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+    font-size: 1em;
+}
